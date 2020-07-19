@@ -4,9 +4,10 @@ services:
     nginx:
         restart: always
         build:
-            dockerfile: Dockerfile.dev
+            dockerfile: Dockerfile
             context: ./docker/nginx
         ports:
+            - 80:80
             - 443:443
         networks:
             meet.jitsi:
