@@ -8,6 +8,10 @@ services:
             context: ./docker/nginx
         ports:
             - 443:443
+        networks:
+            meet.jitsi:
+                aliases:
+                    - ${XMPP_DOMAIN}
     # Frontend
     web:
         container_name: web
