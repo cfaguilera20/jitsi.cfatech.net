@@ -1,6 +1,13 @@
 version: '3'
 
 services:
+    nginx:
+        restart: always
+        build:
+            dockerfile: Dockerfile.dev
+            context: ./docker/nginx
+        ports:
+            - 443:443
     # Frontend
     web:
         image: jitsi/web:latest
