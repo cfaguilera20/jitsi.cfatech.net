@@ -10,6 +10,7 @@ services:
             - 443:443
     # Frontend
     web:
+        container_name: web
         image: jitsi/web:latest
         restart: ${RESTART_POLICY}
         ports:
